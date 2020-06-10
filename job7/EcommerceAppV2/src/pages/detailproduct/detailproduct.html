@@ -1,0 +1,29 @@
+<!--
+  Generated template for the DetailproductPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Detail Product</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <img *ngIf="product.image==null" src="https://ecommerce.jaroji.web.id/uploads/product/images/no-image.jpg" />
+    <img *ngIf="product.image!=null" src="https://ecommerce.jaroji.web.id/uploads/product/images/{{ product.image }}" />
+    <ion-card-content>
+      <h3>
+        Nama Makanan : {{ product.name }}
+      </h3>
+      <h3>
+        Kategori Makanan : {{ product.categori_id}}
+      </h3>
+      <h3>
+        Rp. {{ product.price }}
+      </h3>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
